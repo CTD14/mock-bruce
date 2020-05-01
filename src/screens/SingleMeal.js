@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
+import { View, Text, StyleSheet, Button, Image } from 'react-native';
 import MealContext from '../context/Context';
 
 const SingleMealScreen = props => {
@@ -15,6 +15,13 @@ const SingleMealScreen = props => {
   return (
     <View style={styles.container}>
       {/* Meal Information and Description */}
+      <Image
+        style={styles.pic}
+        source={{
+          uri:
+          meal.imageUrl,
+        }}
+      />
       <View style={styles.infoCard}>
         <Text>{meal.title}</Text>
         <Text>{meal.price}</Text>
@@ -42,6 +49,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#999',
     borderRadius: 5,
   },
+  pic: 
+  {
+    flex: 1,
+    justifyContent: 'center'
+    
+  }
+
 });
 
 export default SingleMealScreen;
