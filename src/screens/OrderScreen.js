@@ -30,7 +30,8 @@ const OrderScreen = props => {
                     mealId: itemData.item.id,
                   });
                 }}>
-                <Text style={styles.title}>{itemData.item.title}</Text>
+                <Text style={styles.title}>
+                  {itemData.item.title}</Text>
               </TouchableOpacity>
             </View>
           );

@@ -17,7 +17,9 @@ const SingleMealScreen = props => {
       {/* Meal Information and Description */}
       <View style={styles.infoCard}>
         <Text>{meal.title}</Text>
-      </View>
+        <Text>{meal.price}</Text>
+        <Text>{meal.affordability}</Text>
+           </View>
 
       {/* Order Now button and input for quantity */}
       <View style={styles.actionButtons}>
