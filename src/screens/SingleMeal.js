@@ -24,14 +24,21 @@ const SingleMealScreen = props => {
       />
       <View style={styles.infoCard}>
         <Text>{meal.title}</Text>
-        <Text>{meal.price}</Text>
+        <Text>${meal.price}</Text>
         <Text>{meal.affordability}</Text>
+        <Text>Enter Quantity:</Text>
+					<TextInput style={styles.textInputStyle} />
+        
            </View>
 
       {/* Order Now button and input for quantity */}
-      <View style={styles.actionButtons}>
+      <View>
         {/* I need a quantity input :/ */}
-        <Button title='Order Now!' />
+        <Button title='Order Now!' 
+        onPress={() => {
+          orderMeal(order);
+          //console.log(order);
+        }} />
       </View>
     </View>
   );
@@ -54,7 +61,15 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center'
     
-  }
+  },
+  textInputStyle: {
+		height: 20,
+		width: 40,
+		justifyContent: 'center',
+		borderColor: 'gray',
+		borderWidth: 1,
+		backgroundColor: 'white',
+  },
 
 });
 
