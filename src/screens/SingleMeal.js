@@ -22,7 +22,12 @@ const SingleMealScreen = props => {
       {/* Order Now button and input for quantity */}
       <View style={styles.actionButtons}>
         {/* I need a quantity input :/ */}
-        <Button title='Order Now!' />
+        <Button title='Order Now!' onPress={() => {
+          setOrder(order);
+          addToOrder(order);
+          console.log(meal.title);
+          console.log(order);
+        }} />
       </View>
     </View>
   );
